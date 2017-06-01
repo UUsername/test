@@ -1,0 +1,130 @@
+@import url("reset.css");
+.box(@row:row){
+    display: flex;
+    flex-direction: @row;
+}  
+.whb(@w,@h,@b){
+    width: @w;
+    height: @h;
+    background: @b;
+}
+html{
+    font-size: 62.5%;
+}
+html,body,.full{
+    width: 100%;
+    height: 100%;
+}
+body{
+    .box(column);  
+}
+header{
+    .box();
+    .whb(100%, 1rem,0);
+    align-items:center;
+    justify-content: space-between;
+    img{
+        .whb(30px, 30px,0);
+    }
+    .login_center{
+        margin-left: -30px;
+        font-size: 0.4rem;
+    }
+}
+section{
+    overflow-x: hidden;
+    flex: 1;
+    .login_seatch{
+        .whb(100%, 1.2rem, #ccc);
+        padding-top: 0.2rem;
+        input{
+            display: block;
+            .whb(90%, 0.8rem, 0);  
+            margin: 0 auto; 
+            border: 1px solid blue;
+            border-radius:5px;
+        }
+        #diva{
+            .whb(100%,100%,0);
+        }
+    }
+    .my_attention{
+        .whb(100%,auto,0);
+        .my_a{
+        .whb(100%,1.2rem,0);
+        .box();
+        line-height: 1.2rem;
+        justify-content: space-between;
+        border: 1px solid #ccc;
+        span:nth-child(1){
+            padding-left: 0.2rem;
+        }
+        span:nth-child(2){
+            padding-right: 0.2rem;
+        }
+        }
+    }
+    .my_attention_list{
+        display: none;
+        .whb(100%,3rem,0);
+        transition: 1s;
+        .aaaa{
+            .box();
+            justify-content: space-around;
+            // line-height: 1rem;
+            .whb(100%,1rem,0);
+            img{
+                display: block;
+                .whb(0.8rem,0.8rem,blue);
+            }
+            .zhong{
+                .box(column);
+            }
+            button{
+                .whb(1rem,0.8rem,0);
+            }
+        }
+
+    }
+    .login_t{
+        .whb(100%,0.8rem,#ccc);
+        line-height: 0.8rem;
+        span{
+            margin-left: 0.2rem;
+            padding-left: 0.2rem;
+            border-left: 3px solid red;
+        }
+    }
+}   
+        .aaaa{
+            .box();
+            justify-content: space-around;
+            // line-height: 1rem;
+            .whb(100%,1rem,0);
+            img{
+                display: block;
+                .whb(0.8rem,0.8rem,blue);
+            }
+            .zhong{
+                .box(column);
+            }
+            button{
+                .whb(1rem,0.8rem,0);
+            }
+        }
+
+footer{
+    font-family: '微软雅黑';
+    font-size: 0.3rem;
+    .whb(100%,1.2rem,0);
+    ul{
+        justify-content: space-around;
+        .box(row);
+        li{
+            img{
+                display: block;
+                .whb(0.6rem,0.6rem,0);
+            }
+        }
+    }
+}

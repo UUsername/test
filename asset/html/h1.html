@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/h1.css" />
+</head>
+<script>
+    window.onload = function () {
+        /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+          为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+        getRem(720, 100)
+    };
+    window.onresize = function () {
+        getRem(720, 100)
+    };
+    function getRem(pwidth, prem) {
+        var html = document.getElementsByTagName("html")[0];
+        var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+        html.style.fontSize = oWidth / pwidth * prem + "px";
+    }
+
+</script>
+
+<body>
+    <header>
+        <span><img src="../icon/back.png" alt=""></span>
+        <span class="login_center"><h3>录取导师</h3></span>
+        <span></span>
+    </header>
+    <section>
+        <div class="login_seatch">
+            <input type="text" name="" value="" id="input" placeholder="请输入你要查找的姓名">
+            <div id="seach_a" class="seach_a">
+
+            </div>
+        </div>
+        <div class="my_attention">
+            <div class="my_a">
+                <span>我关注的</span><span onclick="change()">></span>
+            </div>
+            <div class="my_attention_list">
+
+            </div>
+        </div>
+        <div class="my_attention">
+            <div class="my_a">
+                <span>大学办主任</span><span>></span>
+            </div>
+            <div class="my_attention_list">
+
+            </div>
+        </div>
+        <div class="login_t">
+            <span>志愿填报</span>
+        </div>
+        <div class="my_attention">
+            <div class="my_a">
+                <span>大学办主任</span><span>></span>
+            </div>
+            <div class="my_attention_list">
+
+            </div>
+        </div>
+        <div class="my_attention">
+            <div class="my_a">
+                <span>大学办主任</span><span>></span>
+            </div>
+            <div class="my_attention_list">
+
+            </div>
+        </div>
+        <div class="my_attention">
+            <div class="my_a">
+                <span>大学办主任</span><span>></span>
+            </div>
+            <div class="my_attention_list">
+
+            </div>
+        </div>
+        <div class="my_attention">
+            <div class="my_a">
+                <span>大学办主任</span><span>></span>
+            </div>
+            <div class="my_attention_list">
+
+            </div>
+        </div>
+        <div class="my_attention">
+            <div class="my_a">
+                <span>大学办主任</span><span>></span>
+            </div>
+            <div class="my_attention_list">
+
+            </div>
+        </div>
+        <div class="my_attention">
+            <div class="my_a">
+                <span>大学办主任</span><span>></span>
+            </div>
+            <div class="my_attention_list">
+
+            </div>
+        </div>
+        <div class="login_t">
+            <span>志愿填报</span>
+        </div>
+        <div class="my_attention">
+            <div class="my_a">
+                <span>大学办主任</span><span>></span>
+            </div>
+            <div class="my_attention_list">
+
+            </div>
+        </div>
+        <div class="my_attention">
+            <div class="my_a">
+                <span>大学办主任</span><span>></span>
+            </div>
+            <div class="my_attention_list">
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <ul>
+            <li><img src="../images/8_10.jpg" alt="">
+                <p>点击</p>
+            </li>
+            <li><img src="../images/8_07.jpg" alt="">
+                <p>点击</p>
+            </li>
+            <li><img src="../images/8_13.jpg" alt="">
+                <p>点击</p>
+            </li>
+            <li><img src="../images/8_15.jpg" alt="">
+                <p>点击</p>
+            </li>
+            <li><img src="../images/8_17.jpg" alt="">
+                <p>点击</p>
+            </li>
+        </ul>
+    </footer>
+</body>
+<script>
+    var oDiv = document.getElementsByTagName('div');
+    var data;
+    for (var i = 0; i < oDiv.length; i++) {
+        if (oDiv[i].className == 'my_attention') {
+            oDiv[i].onclick = function () {
+
+                var aa = document.getElementsByClassName('aaaa');
+                for (var i = 0; i < aa.length; i++) {
+                    console.log(1);
+                    aa[0].onclick = function (ev) {
+                        e.stopPropagation();
+                    }
+                }
+                var _this = this;
+                var req = createXMLHTTPRequest();
+                if (req) {
+                    req.open("GET", "../date/h1.json", true);
+                    req.onreadystatechange = function () {
+                        if (req.readyState == 4) {
+                            if (req.status == 200) {
+                                var user = req.responseText;
+                                var chidd = _this.lastElementChild;
+                                var styles = getComputedStyle(chidd)['display'];
+                                chidd.style.display = styles == 'block' ? 'none' : 'block';
+                                var cToObj = eval("(" + user + ")");      //转换成字符串
+                                data = cToObj;
+                                chidd.innerHTML = "";
+                                for (var i = 0; i < cToObj.list.length; i++) {
+                                    var e = document.createElement("div");
+                                    e.className = "aaaa";
+                                    e.innerHTML = "<img src='../images/8_03.jpg' /><div class='zhong'><span>" + cToObj.list[i].user + "</span><p>我是好人好人！！！</p></div><button>+关注</button>";
+                                    _this.lastElementChild.appendChild(e);
+                                }
+                            } else {
+                                alert('error');
+                            }
+                        }
+                    }
+                    req.send(null);
+                }
+            }
+        }
+    }
+    var input = document.getElementById('input');
+    var input_a = document.getElementsByClassName('login_seatch')[0];
+    input.onfocus = function () {
+        input_a.style.paddingBottom = '10rem';
+        input_a.style.transition = '0.5s';
+    }
+    var diva = document.getElementsByClassName('seach_a')[0];
+    input.onkeyup = function (ev) {
+            diva.innerHTML = "";
+        for (var i = 0; i < data.list.length; i++) {
+            if (data.list[i].user.indexOf(input.value) != -1 && input.value!="") {
+                var e = document.createElement("div");
+                e.className = "aaaa";
+                e.innerHTML = "<img src='../images/8_03.jpg' /><div class='zhong'><span>" + data.list[i].user + "</span><p>我是好人好人！！！</p></div><button>+关注</button>";
+                diva.appendChild(e);
+            }
+        }
+    }
+    input.onmouseout = function () {
+        input_a.style.paddingBottom = '0';
+        input_a.style.transition = '0.5s';
+    }
+
+    function myfn(e) {
+        window.event ? window.event.cancelBubble = true : e.stopPropagation();
+    }
+
+    function getStyle(obj, attr) {
+        return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj)[attr];
+    }
+
+    function createXMLHTTPRequest() {
+        var xmlHttpRequest;
+        if (window.XMLHttpRequest) {
+            xmlHttpRequest = new XMLHttpRequest();
+            if (xmlHttpRequest.overrideMimeType) {
+                xmlHttpRequest.overrideMimeType("text/xml");
+            }
+        } else if (window.ActiveXObject) {
+            var activexName = ["MSXML2.XMLHTTP", "Microsoft.XMLHTTP"];
+            for (var i = 0; i < activexName.length; i++) {
+                try {
+                    xmlHttpRequest = new ActiveXObject(activexName[i]);
+                    if (xmlHttpRequest) {
+                        break;
+                    }
+                } catch (e) {
+                }
+            }
+        }
+        return xmlHttpRequest;
+    }
+
+</script>
+
+</html>
