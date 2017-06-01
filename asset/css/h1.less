@@ -1,7 +1,12 @@
 @import url("reset.css");
 .box(@row:row){
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: @row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: @row;
+            flex-direction: @row;
 }  
 .whb(@w,@h,@b){
     width: @w;
@@ -21,8 +26,12 @@ body{
 header{
     .box();
     .whb(100%, 1rem,0);
-    align-items:center;
-    justify-content: space-between;
+    -webkit-box-align:center;;
+        -ms-flex-align:center;;
+            align-items:center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     img{
         .whb(30px, 30px,0);
     }
@@ -32,8 +41,15 @@ header{
     }
 }
 section{
-    overflow-x: hidden;
-    flex: 1;
+    // scroll-snap-points-y: none;
+    overflow-y: auto;
+    &::-webkit-scrollbar{
+        width: 0px;
+    }
+    // overflow-x: hidden;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     .login_seatch{
         .whb(100%, 1.2rem, #f5f5f5);
         padding-top: 0.2rem;
@@ -43,7 +59,7 @@ section{
             margin: 0 auto; 
             color: #999999;
             border: none;
-            outline: none; //浏览器获取焦点边框
+            outline: none; // 浏览器获取焦点边框
             border-radius:8px;
         }
         #diva{
@@ -63,7 +79,9 @@ section{
         .whb(100%,1.2rem,0);
         .box();
         line-height: 1.2rem;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         border-top: 1px solid #ccc;
         span:nth-child(1){
             padding-left: 0.2rem;
@@ -94,7 +112,9 @@ section{
                             
             }
             .zhong{
-                flex: 1;
+                -webkit-box-flex: 1;
+                    -ms-flex: 1;
+                        flex: 1;
             }
             .zhong2{
             .whb(2rem,1rem,0);
@@ -127,7 +147,8 @@ section{
 }   
         .aaaa{
             .box();
-            justify-content: space-around;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
             // line-height: 1rem;
             .whb(100%,1rem,0);
             img{
@@ -147,7 +168,8 @@ footer{
     font-size: 0.3rem;
     .whb(100%,1.2rem,0);
     ul{
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
         .box(row);
         li{
             img{
@@ -174,7 +196,9 @@ footer{
                             
             }
             .zhong{
-                flex: 1;
+                -webkit-box-flex: 1;
+                    -ms-flex: 1;
+                        flex: 1;
             }
             .zhong2{
             .whb(2rem,1rem,0);

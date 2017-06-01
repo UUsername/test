@@ -152,12 +152,12 @@
     var data;
     for (var i = 0; i < oDiv.length; i++) {
         if (oDiv[i].className == 'my_attention') {
-            oDiv[i].onclick = function () {
+            oDiv[i].onclick = function () { 
 
-                var aa = document.getElementsByClassName('aaaa');
+                var aa = document.getElementsByClassName('my_attention_list');
                 for (var i = 0; i < aa.length; i++) {
-                    aa[0].onclick = function (ev) {
-                        e.stopPropagation();
+                    aa[i].onclick = function (ev) {
+                        ev.stopPropagation();
                     }
                 }
                 var _this = this;
@@ -170,10 +170,12 @@
                                 var user = req.responseText;
                                 var chidd = _this.lastElementChild;
                                 var styles = getComputedStyle(chidd)['display'];
+                                // _this.lastElementChild.style.transition = '1s';
                                 chidd.style.display = styles == 'block' ? 'none' : 'block';
                                 var cToObj = eval("(" + user + ")");      //转换成字符串
                                 data = cToObj;
                                 chidd.innerHTML = "";
+
                                 for (var i = 0; i < cToObj.list.length; i++) {
                                     var e = document.createElement("div");
                                     e.className = "aaaa";
@@ -220,6 +222,7 @@
         input_a.style.transition = '0.5s';
         fang.style.display = 'block';
         input.value = "";
+        diva.innerHTML = "";
     }
 
     function myfn(e) {

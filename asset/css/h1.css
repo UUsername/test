@@ -9,16 +9,30 @@ body,
   height: 100%;
 }
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   width: 100%;
   height: 1rem;
   background: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 header img {
@@ -31,8 +45,13 @@ header .login_center {
   font-size: 0.4rem;
 }
 section {
-  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
+}
+section::-webkit-scrollbar {
+  width: 0px;
 }
 section .login_seatch {
   width: 100%;
@@ -72,9 +91,16 @@ section .my_attention .my_a {
   width: 100%;
   height: 1.2rem;
   background: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   line-height: 1.2rem;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   border-top: 1px solid #ccc;
 }
@@ -92,7 +118,12 @@ section .my_attention_list {
   transition: 1s;
 }
 section .my_attention_list .aaaa {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   width: 100%;
   height: 1rem;
@@ -112,6 +143,8 @@ section .my_attention_list .aaaa .zhong1 {
   box-sizing: border-box;
 }
 section .my_attention_list .aaaa .zhong {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
 }
 section .my_attention_list .aaaa .zhong2 {
@@ -145,8 +178,14 @@ section .login_t span {
   border-left: 3px solid red;
 }
 .aaaa {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   width: 100%;
   height: 1rem;
@@ -159,7 +198,12 @@ section .login_t span {
   background: #0000ff;
 }
 .aaaa .zhong {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 .aaaa button {
@@ -175,8 +219,14 @@ footer {
   background: 0;
 }
 footer ul {
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
 }
 footer ul li img {
@@ -186,7 +236,12 @@ footer ul li img {
   background: 0;
 }
 .aaaa {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   width: 100%;
   height: 1rem;
@@ -206,6 +261,8 @@ footer ul li img {
   box-sizing: border-box;
 }
 .aaaa .zhong {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
 }
 .aaaa .zhong2 {
