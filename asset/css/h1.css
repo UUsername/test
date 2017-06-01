@@ -8,9 +8,6 @@ body,
   width: 100%;
   height: 100%;
 }
-.ss{
-  background: red;
-}
 body {
   display: flex;
   flex-direction: column;
@@ -40,24 +37,33 @@ section {
 section .login_seatch {
   width: 100%;
   height: 1.2rem;
-  background: #cccccc;
+  background: #f5f5f5;
   padding-top: 0.2rem;
 }
 section .login_seatch input {
   display: block;
   width: 90%;
   height: 0.8rem;
-  background: 0;
+  background: #ffffff;
   margin: 0 auto;
-  border: 1px solid blue;
-  border-radius: 5px;
+  color: #999999;
+  border: none;
+  outline: none;
+  border-radius: 8px;
 }
 section .login_seatch #diva {
   width: 100%;
   height: 100%;
   background: 0;
 }
+section .login_seatch #fangda {
+  display: block;
+  position: relative;
+  left: 0.5rem;
+  top: -0.55rem;
+}
 section .my_attention {
+  color: #333333;
   width: 100%;
   height: auto;
   background: 0;
@@ -70,7 +76,7 @@ section .my_attention .my_a {
   flex-direction: row;
   line-height: 1.2rem;
   justify-content: space-between;
-  border: 1px solid #ccc;
+  border-top: 1px solid #ccc;
 }
 section .my_attention .my_a span:nth-child(1) {
   padding-left: 0.2rem;
@@ -88,7 +94,6 @@ section .my_attention_list {
 section .my_attention_list .aaaa {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   width: 100%;
   height: 1rem;
   background: 0;
@@ -97,16 +102,36 @@ section .my_attention_list .aaaa img {
   display: block;
   width: 0.8rem;
   height: 0.8rem;
-  background: #0000ff;
+  background: 0;
+}
+section .my_attention_list .aaaa .zhong1 {
+  width: 1.5rem;
+  height: 1rem;
+  background: 0;
+  padding-left: 0.5rem;
+  box-sizing: border-box;
 }
 section .my_attention_list .aaaa .zhong {
-  display: flex;
-  flex-direction: column;
+  flex: 1;
+}
+section .my_attention_list .aaaa .zhong2 {
+  width: 2rem;
+  height: 1rem;
+  background: 0;
+  line-height: 1rem;
 }
 section .my_attention_list .aaaa button {
+  line-height: 0..5rem;
+  color: #b2b2b2;
   width: 1rem;
-  height: 0.8rem;
+  height: 0.5rem;
   background: 0;
+  border: 1px solid #b2b2b2;
+  border-radius: 5px;
+}
+section .my_attention_list .aaaa p {
+  font-size: 0.1rem;
+  color: #999999;
 }
 section .login_t {
   width: 100%;
@@ -159,4 +184,46 @@ footer ul li img {
   width: 0.6rem;
   height: 0.6rem;
   background: 0;
+}
+.aaaa {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 1rem;
+  background: 0;
+}
+.aaaa img {
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: 0;
+}
+.aaaa .zhong1 {
+  width: 1.5rem;
+  height: 1rem;
+  background: 0;
+  padding-left: 0.5rem;
+  box-sizing: border-box;
+}
+.aaaa .zhong {
+  flex: 1;
+}
+.aaaa .zhong2 {
+  width: 2rem;
+  height: 1rem;
+  background: 0;
+  line-height: 1rem;
+}
+.aaaa button {
+  line-height: 0..5rem;
+  color: #b2b2b2;
+  width: 1rem;
+  height: 0.5rem;
+  background: 0;
+  border: 1px solid #b2b2b2;
+  border-radius: 5px;
+}
+.aaaa p {
+  font-size: 0.1rem;
+  color: #999999;
 }
