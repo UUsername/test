@@ -272,6 +272,7 @@ footer ul li img {
   line-height: 1rem;
 }
 .aaaa button {
+  outline: none;
   line-height: 0..5rem;
   color: #b2b2b2;
   width: 1rem;

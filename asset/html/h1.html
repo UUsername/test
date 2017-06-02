@@ -148,17 +148,22 @@
 </body>
 <script>
     var oDiv = document.getElementsByTagName('div');
-
+    var span = document.getElementsByTagName('span');
+    var isClick;
     var data;
     for (var i = 0; i < oDiv.length; i++) {
         if (oDiv[i].className == 'my_attention') {
-            oDiv[i].onclick = function () { 
-
+            oDiv[i].onclick = function () {
+                if(this.firstElementChild.lastElementChild.innerHTML=="&gt;"){
+                    this.firstElementChild.lastElementChild.innerHTML="∨";
+                }else{
+                    this.firstElementChild.lastElementChild.innerHTML="&gt;";
+                }
                 var aa = document.getElementsByClassName('my_attention_list');
                 for (var i = 0; i < aa.length; i++) {
                     aa[i].onclick = function (ev) {
                         ev.stopPropagation();
-                    }
+                    } 
                 }
                 var _this = this;
                 var req = createXMLHTTPRequest();
@@ -179,7 +184,7 @@
                                 for (var i = 0; i < cToObj.list.length; i++) {
                                     var e = document.createElement("div");
                                     e.className = "aaaa";
-                                    e.innerHTML = "<div class='zhong1'><img src='../images/8_03.jpg' /></div><div class='zhong'><span>" + cToObj.list[i].user + "</span><p>"+ cToObj.list[i].asd+"</p></div><div class='zhong2'><button>已关注</button></div>";
+                                    e.innerHTML = "<div class='zhong1'><img src='../images/8_03.jpg' /></div><div class='zhong'><span>" + cToObj.list[i].user + "</span><p>"+ cToObj.list[i].asd+"</p></div><div class='zhong2'><button onclick='state(this)'>已关注</button></div>";
                                     _this.lastElementChild.appendChild(e);
                                 }
                             } else {
@@ -201,13 +206,14 @@
     var fang = document.getElementById('fangda');
     var diva = document.getElementsByClassName('seach_a')[0];
     input.onkeyup = function (ev) {
+        isClick=true;
         fang.style.display = 'none';
         diva.innerHTML = "";
         for (var i = 0; i < data.list.length; i++) {
             if (data.list[i].user.indexOf(input.value) != -1 && input.value != "") {
                 var e = document.createElement("div");
                 e.className = "aaaa";
-                e.innerHTML = "<div class='zhong1'><img src='../images/8_03.jpg' /></div><div class='zhong'><span>" + data.list[i].user + "</span><p>"+ data.list[i].asd+"</p></div><div class='zhong2'><button>已关注</button></div>";
+                e.innerHTML = "<div class='zhong1'><img src='../images/8_03.jpg' /></div><div class='zhong'><span>" + data.list[i].user + "</span><p>"+ data.list[i].asd+"</p></div><div class='zhong2'><button onclick='state(this)'>已关注</button></div>";
                 diva.appendChild(e);
             } else if (input.value == "") {
                 fang.style.display = 'block';
@@ -218,11 +224,13 @@
         }
     }
     input.onmouseout = function () {
+    if(!isClick){
         input_a.style.paddingBottom = '0';
         input_a.style.transition = '0.5s';
         fang.style.display = 'block';
         input.value = "";
         diva.innerHTML = "";
+    }
     }
 
     function myfn(e) {
@@ -253,6 +261,11 @@
             }
         }
         return xmlHttpRequest;
+    }
+    function state(value){
+        value.innerHTML=(value.innerHTML=="已关注")?"+关注":"已关注";
+        value.style.color=(value.innerHTML=="已关注")?"#ccc":"red";
+        value.style.borderColor=(value.innerHTML=="已关注")?"#ccc":"red";
     }
 
 </script>
