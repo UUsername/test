@@ -1,215 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link rel="stylesheet" type="" href="./css/index.css">
     <link rel="stylesheet" type="" href="./inoc/iconfont.css">
     <script>
-    window.onload = function () {
-        /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
-          为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
-        getRem(720, 100)
-    };
-    window.onresize = function () {
-        getRem(720, 100)
-    };
-    function getRem(pwidth, prem) {
-        var html = document.getElementsByTagName("html")[0];
-        var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
-        html.style.fontSize = oWidth / pwidth * prem + "px";
-    }
-</script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(720, 100)
+        };
+        window.onresize = function () {
+            getRem(720, 100)
+        };
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
 </head>
+
 <body>
-        <header>
-                <div class="max_h">
-                    <div><span class="iconfont icon-return"></span></div>
-                    <div><span>选择城市</span></div>
-                </div> 
-        </header>
-        <section>
-            <div class="max_set">
-                <div class="centen1">
-                    <input type="text" name="" value="" placeholder="        请输入城市名称">
-                    <span class="iconfont icon-fangdajing"></span>
-                    <span>热门城市</span>
-                </div>
-                <div class="centen2">
-                    <table class="table">
-                        <tr>
-                            <td>河南</td>
-                            <td>河南</td>
-                            <td>河南</td>
-                        </tr>
-                        <tr>
-                            <td>河南</td>
-                            <td>河南</td>
-                            <td>河南</td>
-                        </tr>
-                        <tr>
-                            <td>河南</td>
-                            <td>河南</td>
-                            <td>河南</td>
-                        </tr>
-                    </table>
-                </div>
-               <div class="centen3">
-                   <span>A</span>
-               </div>
-               <div class="list1">
-                    <ul>
-                        <li>A1</li>
-                        <li>A1</li>
-                        <li>A1</li>
-                        <li>A1</li>
-                        <li>A1</li>
-                        <li>A1</li>
-                    </ul>
-               </div>
-               <div class="centen3">
-                   <span>B</span>
-               </div>
-               <div class="list1">
-                    <ul>
-                        <li>B1</li>
-                        <li>B1</li>
-                        <li>B1</li>
-                        <li>B1</li>
-                        <li>B1</li>
-                        <li>B1</li>
-                    </ul>
-               </div>
-               <div class="centen3">
-                   <span>C</span>
-               </div>
-               <div class="list1">
-                    <ul>
-                        <li>C1</li>
-                        <li>C1</li>
-                        <li>C1</li>
-                        <li>C1</li>
-                        <li>C1</li>
-                        <li>C1</li>
-                    </ul>
-               </div>
-               <div class="centen3">
-                   <span>D</span>
-               </div>
-               <div class="list1">
-                    <ul>
-                        <li>D1</li>
-                        <li>D1</li>
-                        <li>D1</li>
-                        <li>D1</li>
-                        <li>D1</li>
-                        <li>D1</li>
-                    </ul>
-               </div>
-               <div class="centen3">
-                   <span>E</span>
-               </div>
-               <div class="list1">
-                    <ul>
-                        <li>E1</li>
-                        <li>E1</li>
-                        <li>E1</li>
-                        <li>E1</li>
-                        <li>E1</li>
-                        <li>E1</li>
-                    </ul>
-               </div>
-                <div class="centen3">
-                   <span>F</span>
-               </div>
-               <div class="list1">
-                    <ul>
-                        <li>F1</li>
-                        <li>F1</li>
-                        <li>F1</li>
-                        <li>F1</li>
-                        <li>F1</li>
-                        <li>F1</li>
-                    </ul>
-               </div>
+    <header>
+        <div class="max_h">
+            <div><span class="iconfont icon-return"></span></div>
+            <div><span>选择城市</span></div>
+        </div>
+    </header>
+    <section>
+        <div class="max_set">
+            <div class="centen1">
+                <input type="text" name="" value="" placeholder="        请输入城市名称">
+                <span class="iconfont icon-fangdajing"></span>
+                <span>热门城市</span>
             </div>
-            <div class="f">
-                <ul id="ul" class=1>
-                    <li>A</li>
-                    <li>B</li>
-                    <li>C</li>
-                    <li>D</li>
-                    <li>E</li>
-                    <li>F</li>
-                    <li>G</li>
-                    <li>H</li>
-                    <li>J</li>
-                    <li>K</li>
-                    <li>L</li>
-                    <li>M</li>
-                    <li>N</li>
-                    <li>O</li>
-                    <li>P</li>
-                    <li>Q</li>
-                    <li>R</li>
-                    <li>S</li>
-                    <li>T</li>
-                    <li>U</li>
-                    <li>V</li>
-                    <li>W</li>
-                    <li>X</li>
-                    <li>Y</li>
-                    <li>Z</li>
-                    <li>#</li>
+            <div class="centen2">
+                <table class="table">
+                    <tr>
+                        <td>河南</td>
+                        <td>河南</td>
+                        <td>河南</td>
+                    </tr>
+                    <tr>
+                        <td>河南</td>
+                        <td>河南</td>
+                        <td>河南</td>
+                    </tr>
+                    <tr>
+                        <td>河南</td>
+                        <td>河南</td>
+                        <td>河南</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="centen3">
+                <span>A</span>
+            </div>
+            <div class="list1">
+                <ul>
+                    <li>A1</li>
+                    <li>A1</li>
+                    <li>A1</li>
+                    <li>A1</li>
+                    <li>A1</li>
+                    <li>A1</li>
                 </ul>
             </div>
-        </section>
+            <div class="centen3">
+                <span>B</span>
+            </div>
+            <div class="list1">
+                <ul>
+                    <li>B1</li>
+                    <li>B1</li>
+                    <li>B1</li>
+                    <li>B1</li>
+                    <li>B1</li>
+                    <li>B1</li>
+                </ul>
+            </div>
+            <div class="centen3">
+                <span>C</span>
+            </div>
+            <div class="list1">
+                <ul>
+                    <li>C1</li>
+                    <li>C1</li>
+                    <li>C1</li>
+                    <li>C1</li>
+                    <li>C1</li>
+                    <li>C1</li>
+                </ul>
+            </div>
+            <div class="centen3">
+                <span>D</span>
+            </div>
+            <div class="list1">
+                <ul>
+                    <li>D1</li>
+                    <li>D1</li>
+                    <li>D1</li>
+                    <li>D1</li>
+                    <li>D1</li>
+                    <li>D1</li>
+                </ul>
+            </div>
+            <div class="centen3">
+                <span>E</span>
+            </div>
+            <div class="list1">
+                <ul>
+                    <li>E1</li>
+                    <li>E1</li>
+                    <li>E1</li>
+                    <li>E1</li>
+                    <li>E1</li>
+                    <li>E1</li>
+                </ul>
+            </div>
+            <div class="centen3">
+                <span>F</span>
+            </div>
+            <div class="list1">
+                <ul>
+                    <li>F1</li>
+                    <li>F1</li>
+                    <li>F1</li>
+                    <li>F1</li>
+                    <li>F1</li>
+                    <li>F1</li>
+                </ul>
+            </div>
+        </div>
+        <div class="f">
+            <ul id="ul" class=1>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+                <li>E</li>
+                <li>F</li>
+                <li>G</li>
+                <li>H</li>
+                <li>J</li>
+                <li>K</li>
+                <li>L</li>
+                <li>M</li>
+                <li>N</li>
+                <li>O</li>
+                <li>P</li>
+                <li>Q</li>
+                <li>R</li>
+                <li>S</li>
+                <li>T</li>
+                <li>U</li>
+                <li>V</li>
+                <li>W</li>
+                <li>X</li>
+                <li>Y</li>
+                <li>Z</li>
+                <li>#</li>
+            </ul>
+        </div>
+        <div class="abss">
+
+        </div>
+    </section>
 
 </body>
 <script>
-    var ul = document.getElementsByTagName('ul');
-    var set = document.getElementsByTagName('section')[0];
-    for(var i = 0; i < ul.length; i++){
-    if(!ul[i].className==1){
-        for(var j = 0 ; j < ul[i].children.length; j++){
-            if(j%2==1){
-                ul[i].children[j].style.borderBottom="1px solid #ccc";
-            }
-        }
-    }
-    }
-    var lu = document.getElementById('ul');
-    var divlist = document.getElementsByClassName('centen3');
-    var chid = lu.children;
-    
-    for(var i = 0; i < chid.length; i++){
-        chid[i].onclick = function(){
-            this.style.transition = '1s';
-            var luz = this.innerHTML;
-            for(var i = 0; i < divlist.length; i++){
-                var divz = divlist[i].firstElementChild.innerHTML;
-                if(luz == divz){
-                    console.log(divlist[i].offsetTop);
-                    set.scrollTop=divlist[i].offsetTop
-                }
-            }           
-        }
-    }
-    var num = 0;
-    set.onscroll = function(){
-        for(var i = 0; i < divlist.length; i++){
-            if(this.scrollTop>(divlist[i].offsetTop-200)){
-                for(var j = 0; j < chid.length; j++){
-                    if(divlist[i].firstElementChild.innerHTML==chid[j].innerHTML){
-                        chid[num].style.color='';                        
-                        chid[i].style.color='red';
-                        num = i;
+        var ul = document.getElementsByTagName('ul');
+        var set = document.getElementsByTagName('section')[0];
+        for (var i = 0; i < ul.length; i++) {
+            if (!ul[i].className == 1) {
+                for (var j = 0; j < ul[i].children.length; j++) {
+                    if (j % 2 == 1) {
+                        ul[i].children[j].style.borderBottom = "1px solid #ccc";
                     }
                 }
             }
         }
-    }
+        var lu = document.getElementById('ul');
+        var divlist = document.getElementsByClassName('centen3');
+        var chid = lu.children;
+
+        for (var i = 0; i < chid.length; i++) {
+            chid[i].onclick = function () {
+                this.style.transition = '1s';
+                var luz = this.innerHTML;
+                for (var i = 0; i < divlist.length; i++) {
+                    var divz = divlist[i].firstElementChild.innerHTML;
+                    if (luz == divz) {
+                        set.scrollTop = divlist[i].offsetTop
+                        var abss = document.getElementsByClassName('abss')[0];
+                        // abss.style.transition='1s';
+                        abss.style.display = 'block';
+                        abss.innerHTML = luz;
+                        setTimeout(function () {
+                            abss.style.display = 'none';
+                        }, 1000)
+
+                        // var scrolltop = set.scrollTop;
+                        // var divlistoffsetTop = divlist[i].offsetTop;
+                        // var timer = setInterval(function () {
+                        //     console.log('a'+scrolltop);
+                        //     console.log('b'+divlistoffsetTop);
+                        //     set.scrollTop += 2;
+                        //     if (set.scrollTop > divlistoffsetTop) {
+                        //         clearInterval(timer);
+                        //     }
+                        // }, 1)
+
+
+                    }
+                }
+            }
+        }
+        var num = 0;
+        set.onscroll = function () {
+            for (var i = 0; i < divlist.length; i++) {
+                if (this.scrollTop > (divlist[i].offsetTop - 100)) {
+                    for (var j = 0; j < chid.length; j++) {
+                        if (divlist[i].firstElementChild.innerHTML == chid[j].innerHTML) {
+                            var abss = document.getElementsByClassName('abss')[0];
+                            abss.style.display = 'block';
+                            abss.innerHTML = divlist[i].firstElementChild.innerHTML;
+                            setTimeout(function () {
+                                abss.style.display = 'none';
+                            }, 1000)
+                            chid[num].style.color = '';
+                            chid[i].style.color = 'red';
+                            num = i;
+                        }
+                    }
+                }
+            }
+        }
+
 </script>
+
 </html>

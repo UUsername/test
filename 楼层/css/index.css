@@ -149,3 +149,19 @@ footer {
   flex: 1;
   font-size: 0.2rem;
 }
+.abss {
+  width: 100px;
+  height: 100px;
+  background: #cccccc;
+  display: none;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  line-height: 100px;
+  text-align: center;
+  position: fixed;
+  top: 4.5rem;
+  left: 2.5rem;
+  font-size: 1.5rem;
+  animation: ;
+}

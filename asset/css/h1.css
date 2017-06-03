@@ -3,8 +3,7 @@ html {
   font-size: 62.5%;
 }
 html,
-body,
-.full {
+body {
   width: 100%;
   height: 100%;
 }
