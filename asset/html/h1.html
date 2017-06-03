@@ -41,7 +41,7 @@
         </div>
         <div class="my_attention">
             <div class="my_a">
-                <span>我关注的</span><span ontouchstart="change()">></span>
+                <span>我关注的</span><span>></span>
             </div>
             <div class="my_attention_list">
 
@@ -153,7 +153,7 @@
     var data;
     for (var i = 0; i < oDiv.length; i++) {
         if (oDiv[i].className == 'my_attention') {
-            oDiv[i].ontouchstart = function () {
+            oDiv[i].onclick = function () {
                 if(this.firstElementChild.lastElementChild.innerHTML=="&gt;"){
                     this.firstElementChild.lastElementChild.innerHTML="∨";
                 }else{
@@ -161,7 +161,7 @@
                 }
                 var aa = document.getElementsByClassName('my_attention_list');
                 for (var i = 0; i < aa.length; i++) {
-                    aa[i].ontouchstart = function (ev) {
+                    aa[i].onclick = function (ev) {
                         ev.stopPropagation();
                     } 
                 }
@@ -184,7 +184,7 @@
                                 for (var i = 0; i < cToObj.list.length; i++) {
                                     var e = document.createElement("div");
                                     e.className = "aaaa";
-                                    e.innerHTML = "<div class='zhong1'><img src='../images/8_03.jpg' /></div><div class='zhong'><span>" + cToObj.list[i].user + "</span><p>"+ cToObj.list[i].asd+"</p></div><div class='zhong2'><button ontouchstart='state(this)'>已关注</button></div>";
+                                    e.innerHTML = "<div class='zhong1'><img src='../images/8_03.jpg' /></div><div class='zhong'><span>" + cToObj.list[i].user + "</span><p>"+ cToObj.list[i].asd+"</p></div><div class='zhong2'><button onclick='state(this)'>已关注</button></div>";
                                     _this.lastElementChild.appendChild(e);
                                 }
                             } else {
@@ -199,6 +199,8 @@
     }
     var input = document.getElementById('input');
     var input_a = document.getElementsByClassName('login_seatch')[0];
+    var footer = document.getElementsByTagName('footer')[0];
+    
     input.onfocus = function () {
         input_a.style.paddingBottom = '10rem';
         input_a.style.transition = '0.5s';
@@ -213,7 +215,7 @@
             if (data.list[i].user.indexOf(input.value) != -1 && input.value != "") {
                 var e = document.createElement("div");
                 e.className = "aaaa";
-                e.innerHTML = "<div class='zhong1'><img src='../images/8_03.jpg' /></div><div class='zhong'><span>" + data.list[i].user + "</span><p>"+ data.list[i].asd+"</p></div><div class='zhong2'><button ontouchstart='state(this)'>已关注</button></div>";
+                e.innerHTML = "<div class='zhong1'><img src='../images/8_03.jpg' /></div><div class='zhong'><span>" + data.list[i].user + "</span><p>"+ data.list[i].asd+"</p></div><div class='zhong2'><button onclick='state(this)'>已关注</button></div>";
                 diva.appendChild(e);
             } else if (input.value == "") {
                 fang.style.display = 'block';

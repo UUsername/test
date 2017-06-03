@@ -1,0 +1,151 @@
+@import url("reset.css");
+html {
+  font-size: 62.5%;
+}
+html,
+body,
+.full {
+  width: 100%;
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: '微软雅黑';
+}
+header {
+  width: 100%;
+  height: 1rem;
+  background: 0;
+}
+header .max_h {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 1rem;
+  background: 0;
+}
+header .max_h div:nth-child(1) {
+  width: 0;
+  height: 1rem;
+  background: 0;
+  position: absolute;
+  left: 0;
+  line-height: 1rem;
+}
+header .max_h div:nth-child(1) span {
+  font-size: 0.8rem;
+}
+header .max_h div:nth-child(2) {
+  text-align: center;
+  width: 100%;
+  height: 1rem;
+  background: 0;
+  line-height: 1rem;
+  flex: 1;
+  font-size: 0.5rem;
+}
+section {
+  position: relative;
+  top: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+}
+section::-webkit-scrollbar {
+  width: 0;
+}
+section .max_set .centen1 {
+  position: relative;
+  width: 100%;
+  height: 1.7rem;
+  background: 0;
+}
+section .max_set .centen1 input {
+  margin: 0.2rem 5%;
+  outline: none;
+  margin-bottom: 0.3rem;
+  width: 90%;
+  height: 0.8rem;
+  background: #ffffff;
+  border: none;
+  border-radius: 5px;
+}
+section .max_set .centen1 span {
+  padding-left: 0.2rem;
+}
+section .max_set .centen1 .icon-fangdajing {
+  position: absolute;
+  left: 0.3rem;
+  top: 0.3rem;
+}
+section .max_set .centen2 {
+  overflow: hidden;
+  width: 100%;
+  height: 4rem;
+  background: #ffffff;
+}
+section .max_set .centen2 .table {
+  width: 90%;
+  height: 3rem;
+  background: 0;
+  margin: 0.5rem 5%;
+}
+section .max_set .centen2 .table tr td {
+  width: 2rem;
+  height: 1rem;
+  background: 0;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+section .max_set .centen3 {
+  width: 100%;
+  height: 0.8rem;
+  background: 0;
+  position: relative;
+  line-height: 0.8rem;
+  font-size: 0.4rem;
+}
+section .max_set .centen3 span {
+  margin-left: 0.2rem;
+}
+section .max_set .list1 ul li {
+  font-size: 0.5rem;
+  line-height: 0.8rem;
+  width: 100%;
+  height: 0.8rem;
+  background: 0;
+  margin-left: 0.3rem;
+}
+footer {
+  width: 100%;
+  height: 0.5rem;
+  background: #0000ff;
+}
+.f {
+  display: flex;
+  flex-direction: column;
+  width: 0.5rem;
+  height: 90%;
+  background: 0;
+  position: fixed;
+  right: 0;
+  top: 12%;
+}
+.f ul {
+  width: 0.5rem;
+  height: 98%;
+  background: 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 0;
+  text-align: center;
+}
+.f ul li {
+  color: cornflowerblue;
+  flex: 1;
+  font-size: 0.2rem;
+}

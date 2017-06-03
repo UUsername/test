@@ -1,0 +1,138 @@
+@import url("./reset.css");
+.box(@row:row){
+    display: flex;
+    flex-direction: @row;
+}
+.whb(@w,@h,@b){
+    width: @w;
+    height: @h;
+    background: @b;
+}   
+html{
+    font-size: 62.5%;
+}
+html,body,.full{
+    width: 100%;
+    height: 100%
+}
+body{
+    .box(column);
+    font-family: '微软雅黑';
+}
+header{
+        .whb(100%, 1rem, 0);
+    .max_h{
+        .box(row);
+        .whb(100%, 1rem, 0);
+        div:nth-child(1){
+            .whb(0, 1rem, 0);
+            position: absolute;
+            left: 0;
+            line-height: 1rem;
+            span{
+            font-size: 0.8rem;
+            }
+            
+        }
+        div:nth-child(2){
+        text-align: center;
+        .whb(100%, 1rem, 0);
+        line-height: 1rem;
+        flex: 1;
+        font-size: 0.5rem;
+        }
+    }
+}
+section{
+        position: relative;
+        // left: 0;
+        top: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar{
+        width: 0;
+    }
+    flex: 1;
+        .whb(100%,100%, #f8f8f8); 
+    .max_set{
+          
+        .centen1{
+            // border: 1px solid red;
+            position: relative;
+            .whb(100%,1.7rem,0);   
+            input{
+                margin: 0.2rem 5%;
+                outline: none;
+                margin-bottom: 0.3rem;
+                .whb(90%,0.8rem, #ffffff);   
+                border: none;
+                border-radius: 5px;
+            }
+            span{
+                padding-left: 0.2rem;
+            }
+            .icon-fangdajing{
+                position: absolute;
+                left: 0.3rem;
+                top: 0.3rem;
+            }
+        }
+        .centen2{
+            overflow: hidden;
+            .whb(100%,4rem,#ffffff);   
+            .table{
+                .whb(90%,3rem,0);   
+                margin:0.5rem 5%;
+            tr{
+                td{
+                    .whb(2rem,1rem,0);   
+                    text-align: center;
+                    border: 1px solid #ccc;
+                }
+            }
+            }
+        }
+        .centen3{
+            .whb(100%,0.8rem,0);  
+            position: relative; 
+            line-height: 0.8rem;
+            font-size: 0.4rem;
+            span{
+                margin-left: 0.2rem;
+            }
+        }
+        .list1{
+            ul{
+                li{
+                font-size: 0.5rem;
+                line-height: 0.8rem;
+                .whb(100%,0.8rem,0);   
+                // border-bottom: 1px solid red;
+                margin-left: 0.3rem;
+                }
+            }
+        }
+    }
+}
+footer{
+    .whb(100%, 0.5rem, blue);   
+}
+.f{
+        .box(column);
+    .whb(0.5rem, 90%,0 );   
+    position: fixed;
+    right: 0;
+    top: 12%;    
+    ul{
+    .whb(0.5rem, 98%, 0);           
+        .box(column);
+        line-height: 0;
+        text-align: center;
+        li{
+            color: cornflowerblue;
+            flex: 1;
+            font-size: 0.2rem;
+           
+        }
+    }
+}
