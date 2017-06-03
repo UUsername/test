@@ -150,18 +150,17 @@ footer {
   font-size: 0.2rem;
 }
 .abss {
-  width: 100px;
-  height: 100px;
+  width: 2rem;
+  height: 2rem;
   background: #cccccc;
   display: none;
   color: #ffffff;
   border: none;
   border-radius: 50px;
-  line-height: 100px;
+  line-height: 2rem;
   text-align: center;
   position: fixed;
   top: 4.5rem;
   left: 2.5rem;
   font-size: 1.5rem;
-  animation: ;
 }
